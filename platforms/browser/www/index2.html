@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.min.js"></script>
+        <title>Sube Fotos WorkFlow</title>
+    </head>
+    <body>
+        <div id="content" style="margin-top: 4em; text-align: center;">
+            <img src="img/logo.png"><br/><br/>
+            <img id="takePhoto" src="img/camara.png" alt="Foto WF"><br/>                  
+            <img id="photo" style="text-align: center; margin: 0 auto; width: 50%; height: 50%;" src=""/>
+            <img id="sendPhoto" src="img/enviaImg.png" alt="Envia WF"><br/>    
+            <form method="post" id="formulario" enctype="multipart/form-data">
+              Subir imagen: <input type="file" name="file">
+           </form>            
+        </div>       
+        <div id="respuesta"></div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">app.initialize();</script>
+    </body>
+</html>
+<script>
+     $(function(){
+        $("input[name='file']").on("change", function(){
+            var formData = new FormData($("#formulario")[0]);
+            $.ajax({
+                url: "http://www.alu-ftth.com/appMovil/subeFoto.php",
+                type: "POST",
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function(datos)
+                {
+                    $("#respuesta").html(datos);
+                }
+            });
+        });
+     });
+    </script>
+

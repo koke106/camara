@@ -1,0 +1,101 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.koke.cam"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.koke.cam"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.koke.cam"
+        }
+    }
+}
